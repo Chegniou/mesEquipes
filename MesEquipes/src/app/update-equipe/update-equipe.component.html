@@ -1,0 +1,31 @@
+<div class="container">
+    <div>
+    <h2>Modifier un Equipe :</h2>
+    </div>
+    <form >
+    <div   class="col-sm-2 col-md-2 col-lg-2">
+    <label >ID Equipe</label>
+    <input readonly type="text" [(ngModel)]="currentEquipe.idEquipe"
+    name="idEquipe" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+    <label >Nom Equipe</label>
+    <input type="text"[(ngModel)]= "currentEquipe.nomEquipe"
+    name="nomEquipe" class="form-control">
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+    <label >champion</label>
+    <input type="number" [(ngModel)]= "currentEquipe.champions"
+    name="prixEquipe" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+    <label >Date création</label>
+    <input type="date" [ngModel]="currentEquipe.dateCreation
+    | date: 'yyyy-MM-dd'"
+    (ngModelChange)=" currentEquipe.dateCreation= $event" name="dateCreation" class="form-control">
+</div>
+<div class="mt-2">
+<button type="submit" (click)="updateEquipe()" class="btn btn-success">Modifer</button>
+</div>
+</form>
+</div>

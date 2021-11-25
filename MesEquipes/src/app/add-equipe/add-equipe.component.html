@@ -1,0 +1,34 @@
+<div class="container">
+    <div>
+    <h2>Ajouter un Equipe :</h2>
+    </div>
+    <form >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >ID Equipe</label>
+        <input type="text" [(ngModel)]="newEquipe.idEquipe"
+        name="idProduit" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+        <label >Nom Equipe</label>
+        <input type="text"[(ngModel)]= "newEquipe.nomEquipe"
+        name="nomEquipe" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >Champions</label>
+        <input type="number" [(ngModel)]= "newEquipe.champions"
+        name="champions" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+        <label >Date création</label>
+        <input type="date" [(ngModel)]= "newEquipe.dateCreation"
+        name="dateCreation" class="form-control">
+        </div>
+        <div class="mt-2">
+        <button type="submit" (click)="addEquipe()" class="btn btn-success">Ajouter</button>
+        </div>
+        <div>
+            <h3>{{ message }}</h3>
+        </div>
+        </form>
+        </div>
+        
